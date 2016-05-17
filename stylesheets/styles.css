@@ -1,0 +1,269 @@
+a{
+	color: #208af4;
+}
+
+/* <><><><><><><><>><> nav bars <><><><><><><><><><><>><> */
+.navbar-toggle{
+	border: 0px;
+	margin: 0px;
+	padding-top: 0px;
+}
+
+.navbar-header a.navbar-brand:hover,
+.navbar-header a.navbar-brand:focus{
+	color: #208af4;
+}
+ul.nav li a.nav_link{
+	color: #ffffff;
+}
+
+#frontNav ul li a:hover, 
+#frontNav ul li a:focus{
+	color: #ffffff;
+}
+
+/* <><><><><><><><><><><>><> front page <><><><><><><><><><><><><>><> */
+#defaultCanvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#sections_col{
+	background-color: rgba(243,244,246,0.4);
+}
+
+.icon_span{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+i{
+	color: #ffffff;;
+}
+
+i:hover,
+i:focus{
+	color: #208af4;
+}
+
+#Positions{
+	margin-left: 10px;
+}
+
+#banner{
+	height: 430px;
+	background: rgba(212,228,239,0.6);
+	background: -moz-linear-gradient(left, rgba(212,228,239,0.6) 0%, rgba(43,61,79,0.6) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,0.6)), color-stop(100%, rgba(43,61,79,0.6)));
+	background: -webkit-linear-gradient(left, rgba(212,228,239,0.6) 0%, rgba(43,61,79,0.6) 100%);
+	background: -o-linear-gradient(left, rgba(212,228,239,0.6) 0%, rgba(43,61,79,0.6) 100%);
+	background: -ms-linear-gradient(left, rgba(212,228,239,0.6) 0%, rgba(43,61,79,0.6) 100%);
+	background: linear-gradient(to right, rgba(212,228,239,0.6) 0%, rgba(43,61,79,0.6) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#2b3d4f', GradientType=1 );
+}
+
+/*#banner_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 430px;
+	z-index: -1;
+	opacity: 0.4; filter: alpha(opacity=60);
+}*/
+
+.jumbotron{
+	margin-top: 85px; /*navbar is 45px, give it some space*/
+	height: 150px;
+	background-color: transparent;
+	text-indent: 10%;
+}
+.jumbotron h2{
+	font-weight: bold;
+}
+
+.indent{
+	text-indent: 15%;
+}
+
+.col_centered {
+    display:inline-block;
+    float:none;
+}
+
+footer{
+	width: 100%;
+	height: 60px;
+	margin-top: 25px;
+	padding: 5px;
+	color: #ffffff;
+}
+
+#profile_pic{
+	height: 110px;
+	width: 110px;
+	border-radius: 10%;
+}
+
+/* <><><><><><><><><><><>><> Project boxes <><><><><><><><><><><><><>><> */
+
+.project_box{
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 10px;
+}
+
+.project_img{
+	margin-left: 60px;
+	max-width: 60%;
+	max-height: 60%;
+	-webkit-mask-image:-webkit-linear-gradient(top, rgba(44,62,80,1), rgba(44,62,80,1));
+}
+
+.project_img:hover,
+.project_img:focus{
+	color: red;
+}
+
+.project_hover{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    opacity: 0;
+    background-color: rgba(44, 62, 80,0.7);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    z-index: 101;
+}
+
+.project_hover:hover,
+.project_hover:focus{
+	opacity: 1;
+}
+
+.project_hover .fa{
+	margin: 25%;
+	color: #208af4;
+}
+
+.project_title{
+	background-color: rgba(205,205,205,0.2);
+	float: left;
+	height: 80px;
+	width: 100%;
+	z-index: 100;
+	color: #2c3e50;
+	/*position: absolute;*/
+}
+
+/* <><><><><><><><><><> Project Modals <><><><><><><><><><> */
+.modal{
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+}
+.modal .modal-body{
+	max-height: 600px;
+	overflow-y: auto;
+	padding-top: 5px;
+}
+.modal-content{
+	border-radius: 0;
+	width: 100%;
+	margin: auto;
+}
+
+.modal_body_img{
+	max-width: 20%;
+	max-height: 20%;
+}
+
+.modal-body p a:hover,
+.modal-body p a:focus{
+	color: #208af4;	
+}
+
+.modal-footer{
+	padding: 5px;
+
+}
+
+
+/* <><><><><><><><><><> Effect 1: Brackets <><><><><><><><><><> */
+.cl-effect-1 a::before, button::before,
+.cl-effect-1 a::after, button::after{
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before, button::before{
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after, button::after{
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before, button:hover::before,
+.cl-effect-1 a:hover::after, button:hover::after,
+.cl-effect-1 a:focus::before, button:focus::before,
+.cl-effect-1 a:focus::after, button:focus::after{
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+/* <><><>><><><><>><>  animated skill load bars <><><>><><><><>><><><><>><>*/
+.progress{
+	display: inline;
+	padding: 0px;
+}
+.progress-bar.start{
+	width: 0px;
+    -webkit-animation: progress-bar 2s ease-out forwards;
+       -moz-animation: progress-bar 2s ease-out forwards;
+        -ms-animation: progress-bar 2s ease-out forwards;
+         -o-animation: progress-bar 2s ease-out forwards;
+            animation: progress-bar 2s ease-out forwards;
+
+}
+
+@-moz-keyframes progress-bar {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: attr(percentage);
+    }
+}
+
+@-webkit-keyframes progress-bar {
+	0% {
+	    width: 0px;
+	}
+
+	100% {
+	    width: attr(percentage);
+	}
+}
