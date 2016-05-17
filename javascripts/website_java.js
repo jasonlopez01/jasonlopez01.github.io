@@ -258,18 +258,12 @@ var contact_submit = function(){
         data: data_string,
         dataType: 'json',
         success:function(data){
-            if (data.type === "error"){
-                $('#form_message').addClass('text-warning')
-                $('#form_message').text(data.msg);                
-            }else{
-                $('#contact_form')[0].reset();
-                $('#form_message').addClass('text-info');
-                $('#form_message').text(data.msg);
-            };
+            $('#form_message').addClass('text-info')
+            $('#form_message').text('Thanks for the message ' + $('#inputName').val());
         },
         error: function(data){
             $('#form_message').addClass('text-warning')
-            $('#form_message').text("Sorry, " + data.statusText);
+            $('#form_message').text('Sorry, something went wrong... my bad');
         }
     });
     $('#contact_submit').blur();
