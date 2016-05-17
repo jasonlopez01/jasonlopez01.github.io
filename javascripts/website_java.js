@@ -3,7 +3,6 @@ var resume_obj = {
     'Info':{
         'name':'Jason Edward Lopez',
         'email':'jlopez10@ucsbalum.com',
-        //'phone':'562-714-2261'
     },
 
     'Positions':[
@@ -254,9 +253,10 @@ var contact_submit = function(){
     var data_string = $('#contact_form').serialize();
     $('#form_message').removeClass();
     $.ajax({
-        method:"POST",
-        url:"/contact_submit",
+        method:'POST',
+        url:'//formspree.io/jlopez10@ucsbalum.com',
         data: data_string,
+        dataType: 'json',
         success:function(data){
             if (data.type === "error"){
                 $('#form_message').addClass('text-warning')
@@ -267,7 +267,6 @@ var contact_submit = function(){
                 $('#form_message').text(data.msg);
             };
         },
-        
         error: function(data){
             $('#form_message').addClass('text-warning')
             $('#form_message').text("Sorry, " + data.statusText);
