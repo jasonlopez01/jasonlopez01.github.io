@@ -57,10 +57,10 @@ function Dot() {
     }
 
     if(this.x > width || this.x < 0){
-      this.Xspeed *= -0.5;
+      this.Xspeed *= -1;
     }
     if(this.y > height || this.y < 0){
-      this.Yspeed *= -0.5;
+      this.Yspeed *= -1;
     }
     this.x += this.Xspeed;
     this.y += this.Yspeed;
