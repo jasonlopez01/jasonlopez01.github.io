@@ -251,7 +251,17 @@ var add_projects = function(){ //need to place the \ character after every line 
 
 var contact_submit = function(){
     var data_string = $('#contact_form').serialize();
+    var reg = /\w+[.|\w]*@\w+[.]\w/;
     $('#form_message').removeClass();
+    if(!$('#inputName').val() || !$('#_replyto').val() || !$('#textArea')){
+        $('#form_message').addClass('text-warning')
+        $('#form_message').text('Hey, looks like you left some stuff blank...')
+        return false
+    }else if(re.exec($('#_replyto')) == null){
+        $('#form_message').addClass('text-warning')
+        $('#form_message').text('Hmm, looks like like an invalid email...')
+        return false
+    };
     $.ajax({
         method:'POST',
         url:'//formspree.io/jlopez10@ucsbalum.com',
