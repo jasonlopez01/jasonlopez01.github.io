@@ -91,17 +91,21 @@ var resume_obj = {
 
     ],
 
-    'Education':[
-        {
-            'schools':{
+    'Education':{
+        'schools':[{
                 'name': 'University of California, Santa Barbara',
                 'major': 'Environmental Studies',
                 'degree': 'Bachelor of Arts',
                 'dates':2005,
                 'icon': '/icons/usb_logo.png'
-            }
+            }],
+        'online':[{
+                'site': 'CodeAcademy',
+                'info': 'Various programming tutorials and walkthroughs',
+                'link': '<a href = "https://www.codecademy.com/jasonlopez01" >Link to my profile</a>',
+                'icon': '/icons/codeacademy.png'
+            }]
         }
-    ]
 };
 
 var save_resume_as_array = function(){
@@ -136,16 +140,18 @@ var save_resume_as_array = function(){
     //add education
     resume_array.push('Education')
     resume_array.push('')
-    for(item in resume_obj.Education){
-        for(school in resume_obj.Education[item]){
-            resume_array.push(resume_obj.Education[item][school].name)
-            resume_array.push(resume_obj.Education[item][school].degree)
-            resume_array.push(resume_obj.Education[item][school].major)
-            resume_array.push(resume_obj.Education[item][school].dates)
-        }
+    for(school in resume_obj.Education.schools){
+        resume_array.push(resume_obj.Education.schools[school].name)
+        resume_array.push(resume_obj.Education.schools[school].degree)
+        resume_array.push(resume_obj.Education.schools[school].major)
+        resume_array.push(resume_obj.Education.schools[school].dates)
+    }
+    for(site in resume_obj.Education.online){
+        resume_array.push(resume_obj.Education.online[site].site)
+        resume_array.push(resume_obj.Education.online[site].info)
     }
     //save it!
-    saveStrings(resume_array, 'tester.txt')
+    saveStrings(resume_array, 'Jason_E_Lopez')
 };
 
 // smooth scrolling
@@ -311,13 +317,18 @@ $(document).ready(function () {
         $('#Skills').append(skill_item)
     };
     //add in education
-    for(item in resume_obj.Education){
-        for(school in resume_obj.Education[item]){
-            $('#Education').append('<h4>' + resume_obj.Education[item][school].name + '</h4>')
-            $('#Education').append('<h4>' + resume_obj.Education[item][school].degree + ' in ' + resume_obj.Education[item][school].major + ', ' + resume_obj.Education[item][school].dates + ' </h4>')
-            $('#Education').append('<img src =' + resume_obj.Education[item][school].icon + '>')
-        }
-    }
+    for(school in resume_obj.Education.schools){
+        console.log(school)
+        $('#Education').append('<h4>' + resume_obj.Education.schools[school].name + '</h4>')
+        $('#Education').append('<h5>' + resume_obj.Education.schools[school].degree + ' in ' + resume_obj.Education.schools[school].major + ', ' + resume_obj.Education.schools[school].dates + ' </h5>')
+        $('#Education').append('<img src =' + resume_obj.Education.schools[school].icon + '>')
+    };
+    for(site in resume_obj.Education.online){
+        $('#Education').append('<h4>' + resume_obj.Education.online[site].site + '</h4>')
+        $('#Education').append('<h5>' + resume_obj.Education.online[site].info + '</h5>')
+        $('#Education').append('<h5>' + resume_obj.Education.online[site].link + '</h5>')
+        $('#Education').append('<img src =' + resume_obj.Education.online[site].icon + '>')
+    };
     // add in work experience
     for(job in resume_obj.Positions){
         $('#Positions').append('<h4>' + resume_obj.Positions[job].title + '</h4>')
