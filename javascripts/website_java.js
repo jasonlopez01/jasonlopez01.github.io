@@ -203,70 +203,19 @@ var projects_obj = [
     }
 ];
 
-/* KEEP PROJECTS??????????????????????????????????
-var add_projects = function(){ //need to place the \ character after every line break for hmtl block as variable
-    var project_box ="<div class = 'col-md-2 col_centered project_box'> \
-            <a href ='#%ID%' data-toggle = 'modal'> \
-                <img src = %IMG-URL% class = 'img-responsive project_img'> \
-                <div class = 'project_title'><h4>%TITLE%</h4><h5>%CAPTION%</h5></div> \
-                <div class = 'project_hover'><span class='fa fa-expand fa-4x'></span></div> \
-            </a> \
-        </div>"
-//NEED TO CREDIT ICON AUTORS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// !!!!!!! http://www.flaticon.com/free-icon/website_14714 //
-//expand, double up, plus or ?? icon, arrows???????????????????????????????????????????????
-    var project_modal = "<div class='modal fade' id = '%ID%' tabindex='-1' role='dialog'> \
-            <div class='modal-content'> \
-                <div class = 'containter'> \
-                    <div class = 'row text-center'> \
-                        <div class = 'col-md-10 col_centered'> \
-                            <div class='modal-header'> \
-                                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>X</button> \
-                                <h4 class='modal-title'>%TITLE%</h4> \
-                            </div> \
-                            <div class='modal-body'> \
-                                %TEXT% \
-                                <img src = '%IMG-URL%' class = 'modal_body_img'> \
-                            </div> \
-                            <div class='modal-footer'> \
-                                <button type='button' class='btn btn-default' data-dismiss='modal'>Close Project</button> \
-                            </div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-        </div>"
-
-
-    jQuery.each(projects_obj,function(i,val){
-        //!!!!!!!!!!!!!! BETTER WAY TO DO THIS --- replace all variables in one go!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        project_box_item = project_box.replace(/%TITLE%/g,val.name);
-        project_box_item = project_box_item.replace(/%IMG-URL%/g,val.title_img);
-        project_box_item = project_box_item.replace(/%ID%/g,val.id);
-        project_box_item = project_box_item.replace(/%CAPTION%/g,val.caption);
-        project_modal_item = project_modal.replace(/%ID%/g,val.id);
-        project_modal_item = project_modal_item.replace(/%TITLE%/g,val.name);
-        project_modal_item = project_modal_item.replace(/%TEXT%/g,val.text);
-        project_modal_item  = project_modal_item.replace(/%IMG-URL%/g,val.title_img);
-        $('#projects').append(project_box_item);
-        $('body').append(project_modal_item);
-    });
-};
-???????????? KEEP PROJECTS ???????????*/
-
 var contact_submit = function(){
     var data_string = $('#contact_form').serialize();
     var reg = /\w+[.|\w]*@\w+[.]\w/;
+    var address = reg.exec()
     $('#form_message').removeClass();
     if(!$('#inputName').val() || !$('#_replyto').val() || !$('#textArea')){
         $('#form_message').addClass('text-warning')
         $('#form_message').text('Hey, looks like you left some stuff blank...')
         return false
-    }else if(re.exec($('#_replyto')) == null){
+    }else if(reg.exec($('#_replyto').val()) == null){
         $('#form_message').addClass('text-warning')
         $('#form_message').text('Hmm, looks like like an invalid email...')
-        return false
+        return false;
     };
     $.ajax({
         method:'POST',
@@ -288,10 +237,8 @@ var contact_submit = function(){
 
 $(document).ready(function () {
     smooth_scrolling();
-
-    //add_projects(); KEEP PROJECTS ?????????? KEEP PROJECTS????????????????
     
-    $('#contact_submit').click(contact_submit);
+    $('#contact_submit').on('click', contact_submit);
 
     $("a, button").on('hidden.bs.modal',function(){
         $("a, button").blur()
@@ -318,7 +265,6 @@ $(document).ready(function () {
     };
     //add in education
     for(school in resume_obj.Education.schools){
-        console.log(school)
         $('#Education').append('<h4>' + resume_obj.Education.schools[school].name + '</h4>')
         $('#Education').append('<h5>' + resume_obj.Education.schools[school].degree + ' in ' + resume_obj.Education.schools[school].major + ', ' + resume_obj.Education.schools[school].dates + ' </h5>')
         $('#Education').append('<img src =' + resume_obj.Education.schools[school].icon + '>')
