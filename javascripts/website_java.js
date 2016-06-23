@@ -21,8 +21,7 @@ var resume_obj = {
                 'January 2015:  Coordinated and conducted UAT for major Oracle Application upgrade',
                 'February 2015: Project lead for redevelopment of Oracle Contracts Module. Worked with internal development team, end user teams, and Oracle consultant to \
                     redesign Install Base and Contracts process, system, and tools',
-                'March 2015: Key member of go-live team for company aquisition integration. Although not part of integration planning, was part of onsite team sent to ensure a smooth integration by assisting \
-                    in urgent trainings, system fixes, process analysis, and solutions planning'
+                'March 2015: Key member of go-live team for company acquisition integration. Part of onsite team sent to ensure a smooth integration by assisting in trainings, system fixes, process analysis, and solutions planning'
             ]
         },
 
@@ -35,7 +34,7 @@ var resume_obj = {
                 'Worked with various stakeholders to create and implement new policies and standard operating procedures',
                 'Responsible for all outbound orders and departments involved in order processing',
                 'Performed root cause analysis as issues came up, implemented process improvements as needed',
-                'Coordinated with multiple departments to ensrue accurate order fulfillment and efficient process flow',
+                'Coordinated with multiple departments to ensure accurate order fulfillment and efficient process flow',
                 'Created custom reports and tools, developed metrics and goals for staff',
                 'Created detailed training manuals and oversaw training of new order processing staff',
                 'Acted as project lead in the EMEA Operations redevelopment'
@@ -47,8 +46,8 @@ var resume_obj = {
             'company':'Network Hardware Resale LLC',
             'dates':'July 2010 to September 2011',
             'tasks':[
-                'Managed sales and purchases for wholesale division',
-                'Aided with inventory management by compiling reporst and implementing control policies',
+                'Entered sales and purchases for wholesale division',
+                'Aided with inventory management by compiling reports and implementing control policies',
                 'Coordinated with accounting and operations to ensure proper receipt, payment, collection, and shipment of items',
                 'Handled customer feedback and return procedures'
             ]
@@ -59,8 +58,8 @@ var resume_obj = {
             'company':'Network Hardware Resale LLC',
             'dates':'January 2009 to July 2010',
             'tasks':[
-                'Managed filing staff, coordinated efforts and assigneed tasks',
-                'Supported accoutning department by processing invocies and payments',
+                'Managed filing staff, coordinated efforts and assigned tasks',
+                'Supported accounting department by processing invoices and payments',
                 'Data entry into Excel, editing documents in various formats'
             ]
         },
@@ -70,8 +69,8 @@ var resume_obj = {
             'company':'University of California, Santa Barbara',
             'dates':'September 2008 to December 2008',
             'tasks':[
-                'Audited buildings and took inventory of major applicances/ energy use',
-                'Recorded and analyzed data, presented findings to proejct leaders',
+                'Audited buildings and took inventory of major appliances/ energy use',
+                'Recorded and analyzed data, presented findings to project leaders',
                 'Recogmmended chagnes to reduce energy use to building managers'
             ]
         },
