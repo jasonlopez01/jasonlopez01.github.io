@@ -16,12 +16,9 @@ var resume_obj = {
                 'Monitor application development to ensure quality and on-time deliverables',
                 'Create design specifications for systems enhancements, develop and document test plans',
                 'Support training of system changes and enhancements',
-                'Ad hoc reporting, analysis, and research as needed - using Oracle, Microsoft Excel, SQL, and Tableau',
+                'Ad hoc reporting and analysis as needed - using Oracle, Microsoft Excel, SQL, and Tableau',
                 'Added Services department to responsibilities in June 2014',
-                'January 2015:  Coordinated and conducted UAT for major Oracle Application upgrade',
-                'February 2015: Project lead for redevelopment of Oracle Contracts Module. Worked with internal development team, end user teams, and Oracle consultant to \
-                    redesign Install Base and Contracts process, system, and tools',
-                'March 2015: Key member of go-live team for company acquisition integration. Part of onsite team sent to ensure a smooth integration by assisting in trainings, system fixes, process analysis, and solutions planning'
+                'Key member of go-live team for company acquisition integration. Was part of onsite team sent to ensure a smooth integration by assisting in trainings, system fixes, process analysis, and solutions planning'
             ]
         },
 
