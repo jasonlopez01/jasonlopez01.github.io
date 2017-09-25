@@ -2,7 +2,9 @@
 var resume_obj = {
     'Info':{
         'name':'Jason Edward Lopez',
-        'email':'jlopez10@ucsbalum.com',
+        'email':'jasonlopez01@gmail.com',
+        'LinkedIn': "<a href='https://www.linkedin.com/pub/jason-lopez/54/667/421'>LinkedIn</a>",
+        'Tableau': "<a href='https://public.tableau.com/profile/jasonlopez01'>Tableau Public</a>"
     },
 
     'Positions':[
@@ -11,14 +13,12 @@ var resume_obj = {
             'company':'Curvature LLC',
             'dates':'March 2014 to Present',
             'tasks':[
-                'Facilitate ways to improve business processes and participate in the design of effective solutions',
-                'Communicate with multiple stakeholders to gather system requirements for complex enhancements to various processes and tools',
-                'Monitor application development to ensure quality and on-time deliverables',
-                'Create design specifications for systems enhancements, develop and document test plans',
-                'Support training of system changes and enhancements',
-                'Ad hoc reporting and analysis as needed - using Oracle, Microsoft Excel, SQL, and Tableau',
-                'Added Services department to responsibilities in June 2014',
-                'Key member of go-live team for company acquisition integration. Was part of onsite team sent to ensure a smooth integration by assisting in trainings, system fixes, process analysis, and solutions planning'
+                'Collaborated with multiple stakeholders to gather system requirements for complex enhancements to various processes and tools',
+                'Monitored application development to ensure quality and on-time deliverables',
+                'Created design specifications, developed test plans and training documents',
+                'Performed ad hoc reporting and analysis - using Oracle, Microsoft Excel, SQL, Tableau, and SSRS',
+                'Created ETL process using MS SQL Server SSIS and Python',
+                'Member of go-live team for company acquisition integration. Was part of onsite team sent to ensure a smooth integration by assisting in training, system fixes, process analysis, and solutions planning'
             ]
         },
 
@@ -29,10 +29,9 @@ var resume_obj = {
             'tasks':[
                 'Redeveloped operations order management process and internal warehouse logistics',
                 'Worked with various stakeholders to create and implement new policies and standard operating procedures',
-                'Responsible for all outbound orders and departments involved in order processing',
                 'Performed root cause analysis as issues came up, implemented process improvements as needed',
-                'Coordinated with multiple departments to ensure accurate order fulfillment and efficient process flow',
-                'Created custom reports and tools, developed metrics and goals for staff',
+                'Coordinated with multiple departments to ensure accurate and timely order fulfillment',
+                'Created custom reports and tools, developed metrics and goals for support staff',
                 'Created detailed training manuals and oversaw training of new order processing staff',
                 'Acted as project lead in the EMEA Operations redevelopment'
             ]
@@ -48,29 +47,28 @@ var resume_obj = {
                 'Coordinated with accounting and operations to ensure proper receipt, payment, collection, and shipment of items',
                 'Handled customer feedback and return procedures'
             ]
-        },
+        }
+        // {
+        //     'title':'Administrative Assistant',
+        //     'company':'Network Hardware Resale LLC',
+        //     'dates':'January 2009 to July 2010',
+        //     'tasks':[
+        //         'Managed filing staff, coordinated efforts and assigned tasks',
+        //         'Supported accounting department by processing invoices and payments',
+        //         'Data entry into Excel, editing documents in various formats'
+        //     ]
+        // },
 
-        {
-            'title':'Administrative Assistant',
-            'company':'Network Hardware Resale LLC',
-            'dates':'January 2009 to July 2010',
-            'tasks':[
-                'Managed filing staff, coordinated efforts and assigned tasks',
-                'Supported accounting department by processing invoices and payments',
-                'Data entry into Excel, editing documents in various formats'
-            ]
-        },
-
-        {
-            'title':'Campus Sustainability Intern',
-            'company':'University of California, Santa Barbara',
-            'dates':'September 2008 to December 2008',
-            'tasks':[
-                'Audited buildings and took inventory of major appliances/ energy use',
-                'Recorded and analyzed data, presented findings to project leaders',
-                'Recogmmended chagnes to reduce energy use to building managers'
-            ]
-        },
+        // {
+        //     'title':'Campus Sustainability Intern',
+        //     'company':'University of California, Santa Barbara',
+        //     'dates':'September 2008 to December 2008',
+        //     'tasks':[
+        //         'Audited buildings and took inventory of major appliances/ energy use',
+        //         'Recorded and analyzed data, presented findings to project leaders',
+        //         'Recogmmended chagnes to reduce energy use to building managers'
+        //     ]
+        // },
     ],
 
     'Skills':[
@@ -102,52 +100,6 @@ var resume_obj = {
                 'icon': '/icons/codeacademy.png'
             }]
         }
-};
-
-var save_resume_as_array = function(){
-    var resume_array = []
-    //add info
-    resume_array.push('Info')
-    resume_array.push('')
-    for(item in resume_obj.Info){
-        resume_array.push(resume_obj.Info[item])
-    }
-    resume_array.push('')
-    //add jobs
-    resume_array.push('Work Experience')
-    resume_array.push('')
-    for(job in resume_obj.Positions){
-        resume_array.push(resume_obj.Positions[job].title)
-        resume_array.push(resume_obj.Positions[job].company)
-        resume_array.push(resume_obj.Positions[job].dates)
-        resume_array.push('Responsibilities:')
-        for (task in resume_obj.Positions[job].tasks){
-            resume_array.push('- ' + resume_obj.Positions[job].tasks[task])
-        }
-        resume_array.push('')
-    }
-    //add skills
-    resume_array.push('Skills')
-    resume_array.push('')
-    for(skill in resume_obj.Skills){
-        resume_array.push(resume_obj.Skills[skill]['skill'])
-    }
-    resume_array.push('')
-    //add education
-    resume_array.push('Education')
-    resume_array.push('')
-    for(school in resume_obj.Education.schools){
-        resume_array.push(resume_obj.Education.schools[school].name)
-        resume_array.push(resume_obj.Education.schools[school].degree)
-        resume_array.push(resume_obj.Education.schools[school].major)
-        resume_array.push(resume_obj.Education.schools[school].dates)
-    }
-    for(site in resume_obj.Education.online){
-        resume_array.push(resume_obj.Education.online[site].site)
-        resume_array.push(resume_obj.Education.online[site].info)
-    }
-    //save it!
-    saveStrings(resume_array, 'Jason_E_Lopez')
 };
 
 // smooth scrolling
@@ -215,7 +167,7 @@ var contact_submit = function(){
     };
     $.ajax({
         method:'POST',
-        url:'//formspree.io/jlopez10@ucsbalum.com',
+        url:'//formspree.io/jasonlopez01@gmail.com',
         data: data_string,
         dataType: 'json',
         success:function(data){
@@ -239,8 +191,6 @@ $(document).ready(function () {
     $("a, button").on('hidden.bs.modal',function(){
         $("a, button").blur()
     })
-
-    $('#download').click(save_resume_as_array);
 
     //add in info
     for(item in resume_obj.Info){

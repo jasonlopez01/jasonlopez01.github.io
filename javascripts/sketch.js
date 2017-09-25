@@ -47,7 +47,7 @@ function Dot() {
   this.Yspeed = random(-1,1);
   
   this.distance_to = function(xi,yi){
-    return sqrt(pow(xi-this.x,2) + pow(yi-this.y,2))
+    return dist(xi, yi, this.x, this.y)
   }
   
   this.move = function() {
